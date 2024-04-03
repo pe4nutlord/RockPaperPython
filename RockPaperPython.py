@@ -20,21 +20,17 @@ def play_game(user_choice):
 def update_result_label(user_choice, computer_choice, result):
     result_label.config(text=f"You chose {user_choice}   |   Computer chose {computer_choice}\n{result}")
 
-# Function to create custom rounded buttons with emojis
 def create_rounded_button(root, text, emoji, command):
     button = tk.Button(root, text=emoji, font=('Arial', 18), width=4, height=2, command=command, borderwidth=5, relief=tk.GROOVE)
     button.config(bg="#3498db", fg="white", activebackground="#2980b9", activeforeground="white")
     button.pack(side=tk.LEFT, padx=10)
     return button
 
-# GUI setup
 root = tk.Tk()
 root.title("Rock-Paper-Python")
 
-# Set fixed window size
 root.geometry("400x200")
 
-# Function to create and set up the GUI
 def setup_gui():
     label = tk.Label(root, text="Rock-Paper-Python", font=('Arial', 24), pady=10)
     label.config(fg="#3498db")
